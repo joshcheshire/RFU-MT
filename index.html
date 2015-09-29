@@ -19,14 +19,20 @@
 	<div ng-controller = "mainController">
 		
 		<h1 class = "header"><strong>Playing Tonight</strong></h1>
-		<h3 class = "noFuss"> No Sign Up. No Fuss. Search and Discover bands in your area</h3>
+		
+		<h3 class = "noFuss"> No Sign Up. No Fuss. Search and Discover bands in your area.</h3>
+		
+
 		<form ng-submit="findBands()">
 			<input class = "input" placeholder = "Search by City" ng-model="search">
 			<input type="submit" ng-click = "showData($event)">
 		</form>
 
 		<div class= "dataContainer" ng-show = "showTheData" ng-repeat="data in bandList | filter :search ">
-			<h1 class = "headliner"><em>{{data.headliner}}  {{data.headlinerSound}}</em></h1>
+			<h1 class = "headliner" ng-click="playAudio($event)"><em> {{data.headliner}}  </em></h1>
+			
+			<audio controls> 
+				<source src ="{{data.headlinerSound}}" ng-show= "showAudio"> </audio>
 			<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
 			</div>
 			<h3 class = "venue">{{data.venue}}</h3>

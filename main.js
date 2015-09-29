@@ -13,16 +13,22 @@ var master = angular.module('master', [])
 master.controller('mainController', function($scope){
 	
 $scope.showTheData = false
+$scope.showAudio= false
 
 	$scope.findBands = function(){
 		
-		$scope.showData = function(event){
+	$scope.showData = function(event){
 
 
-$scope.showTheData = !$scope.showTheData
-console.log('click works')
+		$scope.showTheData = !$scope.showTheData
+		console.log('click works')
 
 		}
+
+	$scope.playAudio = function(event){
+		$scope.showAudio = !$scope.showAudio
+
+	}
 
 
 $scope.bandList = bandList
@@ -35,7 +41,7 @@ $scope.bandList = bandList
 var bandList = [{
 
 		headliner:'And So I watch You From Afar',
-		// headlinerSound: href = 'https://m.soundcloud.com/beartrappr/floating-somewhere-high-and-above',
+		headlinerSound:"../audio-files/test.mp3", 
 		supporters:[{
 		name:'Mylet'
 		}, 
