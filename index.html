@@ -1,56 +1,43 @@
 <!DOCTYPE html>
-	<html>
+	<html ng-app="master">
 	
 	<head>
 		<meta charset="utf-8">
 		
 		<title>MidTerm</title>
 		
-		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax
-		/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
+
+		
+		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
 		
 		<link rel = "stylesheet" href = "main.css">
-		
-		<script src = "angular.min.js"> </script>
-
-	</head>
+		</head>
 
 	<body>
-		<h1 class = "header"> Header!!</h1>
-	
+
+	<div ng-controller = "mainController">
+		
+		<h1 class = "header"><strong>Playing Tonight</strong></h1>
+		<h3 class = "noFuss"> No Sign Up. No Fuss. Search and Discover bands in your area</h3>
+		<form ng-submit="findBands()">
+			<input class = "input" placeholder = "Search by City" ng-model="search">
+			<input type="submit" ng-click = "showData($event)">
+		</form>
+
+		<div class= "dataContainer" ng-show = "showTheData" ng-repeat="data in bandList | filter :search ">
+			<h1 class = "headliner"><em>{{data.headliner}}  {{data.headlinerSound}}</em></h1>
+			<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
+			</div>
+			<h3 class = "venue">{{data.venue}}</h3>
+			<h3 class= "city">{{data.city}} , Colorado</h3>
+			<h3 class = "date">{{data.date}}</h3> <hr>
+		</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
 	<script src = "main.js"></script>
-	</body>
+
+</body>
+
+</html>

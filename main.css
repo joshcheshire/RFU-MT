@@ -1,0 +1,46 @@
+
+
+.header{
+	font-family: fantasy;
+	margin-left: 38vw;
+	font-size: 60px;
+}
+
+.noFuss{
+
+font-size: 50px;
+margin-left: 13vw;
+
+
+}
+
+.input{
+	margin-left: 44vw;
+
+}
+.dataContainer{
+	margin-left: 5vw;
+
+}
+
+.headliner{
+	font-size: 18px;
+}
+
+.support{
+
+	font-size: 16px;
+}
+
+.venue{
+font-size: 14px;
+}
+
+.city{
+	font-size: 14px;
+}
+
+.date{
+
+	font-size: 14px
+}
