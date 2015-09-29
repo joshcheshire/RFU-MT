@@ -13,7 +13,8 @@ var master = angular.module('master', [])
 master.controller('mainController', function($scope){
 	
 $scope.showTheData = false
-$scope.showAudio= false
+// $scope.showAudio = false
+
 
 	$scope.findBands = function(){
 		
@@ -21,13 +22,13 @@ $scope.showAudio= false
 
 
 		$scope.showTheData = !$scope.showTheData
-		console.log('click works')
+		// console.log('click works')
 
 		}
 
-	$scope.playAudio = function(event){
-		$scope.showAudio = !$scope.showAudio
-
+	$scope.playAudio = function(data){
+		data.showAudio = !data.showAudio
+		console.log(data.headliner)
 	}
 
 
@@ -40,7 +41,8 @@ $scope.bandList = bandList
 
 var bandList = [{
 
-		headliner:'And So I watch You From Afar',
+		headliner:'And So I watch You From Afar', 
+		// showAudio: false,
 		headlinerSound:"../audio-files/test.mp3", 
 		supporters:[{
 		name:'Mylet'
@@ -59,12 +61,14 @@ var bandList = [{
 },
 {
 		headliner: 'Ben Howard',
+		// showAudio: false,
 		city: 'Denver' ,
 		venue: 'Red Rocks',
 		date: 'October 2, 2015',
 
 },
 {		headliner: 'Zappa Plays Zappa',
+		// showAudio: false,
 		city: 'Boulder' ,
 		venue: 'Boulder Theater',
 		date: ' October 2, 2015'
