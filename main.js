@@ -1,10 +1,3 @@
-// var test = function(){
-// 	console.log('test')
-// }
-// test()
-
-
-
 var master = angular.module('master', [])
 
 
@@ -58,6 +51,7 @@ var bandList = [{
 		city:'Denver' ,
 		venue: 'Marquis Theater',
 		date: 'October 2, 2015',
+		tickets: 'tickets',
 },
 {
 		headliner: 'Ben Howard',
@@ -71,10 +65,29 @@ var bandList = [{
 		// showAudio: false,
 		city: 'Boulder' ,
 		venue: 'Boulder Theater',
-		date: ' October 2, 2015'
+		date: ' October 2, 2015',
+},
+{		headliner: 'Chris Cornell',
+
+		supporters:[{
+		name:'Hemming',
+		}],
+		city: 'Denver',
+		venue: 'The Paramount Theater',
+		date: 'October 2, 2015',
+},
+{
+		headliner: 'DJ Krush',
+		city: 'Denver',
+		venue:'The Bluebird Theater',
+		date: 'October 2, 2015',
 
 
-}]
+
+
+
+},]
 
 console.log(bandList)
+
 
