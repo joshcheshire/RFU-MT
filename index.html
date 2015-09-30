@@ -16,29 +16,50 @@
 
 	<body>
 
+	
 	<div ng-controller = "mainController">
+
+
 		
 		<h1 class = "header"><strong>Playing Tonight</strong></h1>
 		
 		<h3 class = "noFuss"> No Sign Up. No Fuss. Search and Discover bands in your area.</h3>
 		
 
-			<form ng-submit="findBands()">
+			<!-- <form ng-submit="findBands()">
+				
 				<input class = "input" placeholder = "Search by City" ng-model="search">
-				<input type="submit" ng-click = "showData($event)">
-			</form>
+				
+				<input type="Submit" ng-click = "showData($event)">
+			
+			</form> -->
 
-			<div class= "dataContainer" ng-show = "showTheData" ng-repeat="data in bandList | filter :search ">
-				<h1 class = "headliner" ng-click="playAudio(data)"><em> {{data.headliner}} </em></h1>
+
+			<div class = "citySelect">
+						<p> Select A City: {{search.city}}</p>
+						<select ng-change= "findBands()" ng-model="search.city" > 
+							<option value = "Denver" >Denver, CO</option>
+							<option value = "Boulder">Boulder, CO</option>							
+							</select>
+						</div>
+
+
+
+			<div class= "dataContainer"  ng-repeat="data in bandList | filter : search.city">
+				
+				<h1 class = "headliner" ng-click="playAudio(data)"><em> {{data.headliner}}  </em>
+
+				</h1>
+					<!-- <img class = "bandPic" ng-src = "{{data.img}}"> -->
 			
 		
-			<audio controls ng-show = "data.showAudio"  class = "audio"> 
+				<audio controls ng-show = "data.showAudio"  class = "audio"> 
 					
 					<source src ="{{data.headlinerSound}}"> </audio>
 					<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
-				</div>
+			</div>
 			
-			<h3 class = "venue">{{data.venue}}</h3>
+			<h3 class = "venue">{{data.venue}}</h3> <a ng-href="{{data.tickets}}" class="btn btn-info">Buy Tickets</a>
 			
 			<h3 class= "city">{{data.city}},Colorado</h3>
 			

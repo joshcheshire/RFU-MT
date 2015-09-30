@@ -6,16 +6,15 @@ var master = angular.module('master', [])
 master.controller('mainController', function($scope){
 	
 $scope.showTheData = false
-// $scope.showAudio = false
 
 
 	$scope.findBands = function(){
+		console.log($scope.search)
 		
+
 	$scope.showData = function(event){
 
-
 		$scope.showTheData = !$scope.showTheData
-		// console.log('click works')
 
 		}
 
@@ -26,8 +25,18 @@ $scope.showTheData = false
 
 
 $scope.bandList = bandList
+	
 
-	}
+	// if ($scope.filter === "Denver" || 'denver'|| 'Boulder'||'boulder'){
+	// 		return $scope.bandList}
+			
+	// 		else{	alert('Enter a Valid City')
+
+				
+	// 		}
+
+		}
+	
 
 })
 
@@ -35,7 +44,7 @@ $scope.bandList = bandList
 var bandList = [{
 
 		headliner:'And So I watch You From Afar', 
-		// showAudio: false,
+		// img: 'http://cdn.shopify.com/s/files/1/0015/2602/files/HEIRS_NEW_BANNER.jpg?17079',
 		headlinerSound:"../audio-files/test.mp3", 
 		supporters:[{
 		name:'Mylet'
@@ -51,7 +60,7 @@ var bandList = [{
 		city:'Denver' ,
 		venue: 'Marquis Theater',
 		date: 'October 2, 2015',
-		tickets: 'tickets',
+		tickets: 'http://www.ticketweb.com/t3/sale/SaleEventDetail?dispatch=loadSelectionData&eventId=6042955&pl=marquis',
 },
 {
 		headliner: 'Ben Howard',
@@ -59,28 +68,32 @@ var bandList = [{
 		city: 'Denver' ,
 		venue: 'Red Rocks',
 		date: 'October 2, 2015',
+		tickets: 'http://www.axs.com/events/275978/ben-howard-tickets',
+		// img: 'http://blog.lovespeaking.com/wp-content/uploads/2013/03/mercury-prize-ben-howard-every-kingdom.jpg',
 
 },
-{		headliner: 'Zappa Plays Zappa',
+{		headliner: 'Papadosio',
 		// showAudio: false,
 		city: 'Boulder' ,
 		venue: 'Boulder Theater',
 		date: ' October 2, 2015',
+		tickets: 'https://bouldertheater.frontgatetickets.com/event/7dtj5yw14fsm4zqy',
 },
 {		headliner: 'Chris Cornell',
-
 		supporters:[{
 		name:'Hemming',
 		}],
 		city: 'Denver',
 		venue: 'The Paramount Theater',
 		date: 'October 2, 2015',
+		tickets: 'http://www.altitudetickets.com/event/chris-cornell-3928/',
 },
 {
 		headliner: 'DJ Krush',
 		city: 'Denver',
 		venue:'The Bluebird Theater',
 		date: 'October 2, 2015',
+		tickets: 'http://www.axs.com/events/281757/dj-krush-tickets?skin=bluebird&src=AEGLIVE_WBIRDDEN030115VEN001',
 
 
 
