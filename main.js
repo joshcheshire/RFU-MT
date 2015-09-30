@@ -87,8 +87,12 @@ var bandList = [{
 		venue:'The Bluebird Theater',
 		date: 'October 2, 2015',
 		tickets: 'http://www.axs.com/events/281757/dj-krush-tickets?skin=bluebird&src=AEGLIVE_WBIRDDEN030115VEN001',
-
-
+},		
+{		headliner: 'The Black Dahlia Murder',
+		city: 'Montreal',
+		venue: 'Les Foufounes Electrques',
+		date: 'October 2, 2015',
+		tickets: 'https://tickets-ca.ticketfly.com/event/TheBlackDahliaMurder6902738',
 
 
 

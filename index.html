@@ -5,6 +5,8 @@
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>MidTerm</title>
+
+		<link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
 		
 		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/darkly/bootstrap.css">
 
@@ -21,7 +23,7 @@
 
 
 		
-		<h1 class = "header"><strong>Just Listen</strong></h1>
+		<h1 class = "header"><strong>Just Listen.</strong></h1>
 		
 		<h3 class = "noFuss"> No Sign Up. No Fuss.<br> Listen to bands playing in your area.</h3>
 		
@@ -38,8 +40,10 @@
 			<div class = "dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
+							<option value = "Boulder">Boulder, CO</option>	
 							<option value = "Denver" >Denver, CO</option>
-							<option value = "Boulder">Boulder, CO</option>							
+							<option value = "Montreal">Montreal, QC</option>							
+						
 						</select>
 					</div>
 					<div class= "dataContainer"  ng-repeat="data in bandList | filter : search.city">
@@ -47,10 +51,7 @@
 						<h1 class = "headliner" ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
 							</h1>
-					<!-- <img class = "bandPic" ng-src = "{{data.img}}"> -->
-			
-		
-				<audio controls ng-show = "data.showAudio"  class = "audio"> 
+						<audio controls ng-show = "data.showAudio"  class = "audio"> 
 					
 					<source src ="{{data.headlinerSound}}"> </audio>
 					<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
