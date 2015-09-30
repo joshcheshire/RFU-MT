@@ -19,7 +19,7 @@ text-align: center;
 
 	width: 12vw;
 	margin-left: 44vw;
-	background-color:red;
+	background-color:black;
 	
 }
 
@@ -74,8 +74,8 @@ font-size: 14px;
 }
 
 .audio{
-	background-color: #27ae60;
-	border-radius: 5px;
+	background-color: white;
+	border-radius: 8px;
 	-webkit-animation: fadein 2s;
 
 }
