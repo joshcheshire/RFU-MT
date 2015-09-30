@@ -2,11 +2,11 @@
 	<html ng-app="master">
 	
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>MidTerm</title>
 		
-		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
+		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/darkly/bootstrap.css">
 
 		
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
@@ -21,9 +21,9 @@
 
 
 		
-		<h1 class = "header"><strong>Playing Tonight</strong></h1>
+		<h1 class = "header"><strong>Just Listen</strong></h1>
 		
-		<h3 class = "noFuss"> No Sign Up. No Fuss. Search and Discover bands in your area.</h3>
+		<h3 class = "noFuss"> No Sign Up. No Fuss.<br> Listen to bands playing in your area.</h3>
 		
 
 			<!-- <form ng-submit="findBands()">
@@ -35,21 +35,18 @@
 			</form> -->
 
 
-			<div class = "citySelect">
-						<p> Select A City: {{search.city}}</p>
-						<select ng-change= "findBands()" ng-model="search.city" > 
+			<div class = "dropdownDiv">
+					<p class = "citySelect"> Select A City</p>
+						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							<option value = "Denver" >Denver, CO</option>
 							<option value = "Boulder">Boulder, CO</option>							
-							</select>
-						</div>
-
-
-
-			<div class= "dataContainer"  ng-repeat="data in bandList | filter : search.city">
+						</select>
+					</div>
+					<div class= "dataContainer"  ng-repeat="data in bandList | filter : search.city">
 				
-				<h1 class = "headliner" ng-click="playAudio(data)"><em> {{data.headliner}}  </em>
+						<h1 class = "headliner" ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
-				</h1>
+							</h1>
 					<!-- <img class = "bandPic" ng-src = "{{data.img}}"> -->
 			
 		
@@ -59,12 +56,12 @@
 					<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
 			</div>
 			
-			<h3 class = "venue">{{data.venue}}</h3> <a ng-href="{{data.tickets}}" class="btn btn-info">Buy Tickets</a>
+			<h3 class = "venue">{{data.venue}}</h3> 
 			
 			<h3 class= "city">{{data.city}},Colorado</h3>
 			
-			<h3 class = "date">{{data.date}}</h3> <hr>
-		
+			<h3 class = "date">{{data.date}}</h3> 
+		<a ng-href="{{data.tickets}}" class="btn btn-info">Buy Tickets</a><hr>
 		</div>
 
 	</div>

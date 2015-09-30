@@ -27,13 +27,6 @@ $scope.showTheData = false
 $scope.bandList = bandList
 	
 
-	// if ($scope.filter === "Denver" || 'denver'|| 'Boulder'||'boulder'){
-	// 		return $scope.bandList}
-			
-	// 		else{	alert('Enter a Valid City')
-
-				
-	// 		}
 
 		}
 	
