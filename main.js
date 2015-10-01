@@ -50,7 +50,7 @@ var bandList = [{
 		
 		}],
 		
-		city:'Denver' ,
+		city:'Denver,CO' ,
 		venue: 'Marquis Theater',
 		date: 'October 2, 2015',
 		tickets: 'http://www.ticketweb.com/t3/sale/SaleEventDetail?dispatch=loadSelectionData&eventId=6042955&pl=marquis',
@@ -58,7 +58,7 @@ var bandList = [{
 {
 		headliner: 'Ben Howard',
 		// showAudio: false,
-		city: 'Denver' ,
+		city: 'Denver, CO' ,
 		venue: 'Red Rocks',
 		date: 'October 2, 2015',
 		tickets: 'http://www.axs.com/events/275978/ben-howard-tickets',
@@ -67,32 +67,33 @@ var bandList = [{
 },
 {		headliner: 'Papadosio',
 		// showAudio: false,
-		city: 'Boulder' ,
+		city: 'Boulder,CO' ,
 		venue: 'Boulder Theater',
 		date: ' October 2, 2015',
 		tickets: 'https://bouldertheater.frontgatetickets.com/event/7dtj5yw14fsm4zqy',
 },
 {		headliner: 'Chris Cornell',
+		headlinerSound:"cornell.mp3",
 		supporters:[{
 		name:'Hemming',
 		}],
-		city: 'Denver',
+		city: 'Denver,CO',
 		venue: 'The Paramount Theater',
 		date: 'October 2, 2015',
 		tickets: 'http://www.altitudetickets.com/event/chris-cornell-3928/',
 },
 {
 		headliner: 'DJ Krush',
-		city: 'Denver',
+		city: 'Denver, CO',
 		venue:'The Bluebird Theater',
 		date: 'October 2, 2015',
 		tickets: 'http://www.axs.com/events/281757/dj-krush-tickets?skin=bluebird&src=AEGLIVE_WBIRDDEN030115VEN001',
 },		
 {		headliner: 'The Black Dahlia Murder',
-		city: 'Montreal',
+		city: 'Montreal, QC',
 		venue: 'Les Foufounes Electrques',
 		date: 'October 2, 2015',
-		tickets: 'https://tickets-ca.ticketfly.com/event/TheBlackDahliaMurder6902738',
+		tickets:'https://tickets-ca.ticketfly.com/event/TheBlackDahliaMurder6902738',
 
 
 
