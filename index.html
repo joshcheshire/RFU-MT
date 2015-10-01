@@ -24,15 +24,17 @@
   <source src="cheer.mp3" type="audio/mpeg">
 		</audio>
 
+		<img class ="animate zoomIn" id ="background" src = "http://wallpaperlepi.com/wp-content/uploads/2014/10/Silhouette-Rock-Concert-Wallpaper1.jpg">
+
 	
 	<div ng-controller = "mainController">
 
 
 		
-		<h1 class = "animated slideInLeft" id = "header" ><strong>Just Listen.</strong></h1>
+		<h1 class = "animated rubberBand" id = "header" ><strong>Just Listen.</strong></h1>
 
 		
-		<h3  class ="animated fadeInRight" id = "noFuss"> No Sign Up. No Fuss.<br> Listen to bands playing in your city.</h3>
+		<h3  class ="animated fadeInRight" id = "noFuss"> No Sign Up. No Fuss.<br> Discover Bands Playing in Your City Tonight.</h3>
 		
 
 			<!-- <form ng-submit="findBands()">
@@ -44,18 +46,20 @@
 			</form> -->
 
 
-			<div class = "animated fadeInDown" id ="dropdownDiv">
+			<div class = "animated flipInX" id ="dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
-							<option value = "Boulder">Boulder, CO</option>	
-							<option value = "Denver" >Denver, CO</option>
+							<option>Albuquerque, NM</option>
+							<option>Birmingham, AL</option>	
+							<option value = "Chicago">Chicago, IL</option>
+							<option value = "Denver">Denver, CO</option>
 							<option value = "Norway">Trondheim, NRW</option>							
 						
 						</select>
 					</div>
-					<div class= "dataContainer"  ng-repeat="data in bandList | filter : search.city">
+					<div class=  "dataContainer"  ng-repeat="data in bandList | filter : search.city">
 				
-						<h1 class = "headliner" ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
+						<h1 class= "headliner"  ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
 							</h1>
 						
@@ -82,7 +86,7 @@
 			
 			<h3 class = "date">{{data.date}}</h3> 
 		
-		<a ng-href="{{data.tickets}}" class="btn btn-info">Buy Tickets</a><hr>
+		<a ng-href="{{data.tickets}}" class="btn btn-danger">Buy Tickets</a><hr>
 		</div>
 
 	</div>

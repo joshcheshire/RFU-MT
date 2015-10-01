@@ -72,6 +72,15 @@ var bandList = [{
 		date: 'October 2, 2015',
 		tickets: 'http://www.altitudetickets.com/event/chris-cornell-3928/',
 },
+
+
+{
+		headliner: 'No one is playing here. They were all shot over the weekend. sorry',
+		city: 'Chicago',
+},
+
+
+
 {		headliner: 'Between The Buried And Me',
 		headlinerSound:"btbam.mp3",
 		city: 'Trondheim, Norway',

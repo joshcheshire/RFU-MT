@@ -1,9 +1,20 @@
 
+#background{
+
+	position:absolute;
+	background-size: cover;
+	width:100vw;
+
+}
+
 #header{
 	font-family: 'Jura', sans-serif;
 text-align: center;
 	font-size: 60px;
-
+	position: relative;
+	top:-21px;
+	background-color: rgba(0,0,0,1)
+	
 }
 
 
@@ -20,7 +31,7 @@ text-align: center;
 .selector{
 
 	width: 12vw;
-	margin-left: 44vw;
+	margin-left: 43.5vw;
 	background-color:black;
 	
 }
@@ -28,14 +39,16 @@ text-align: center;
 .citySelect{
 	font-size: 25px;
 	text-align: center;
+	font-family: 'Jura', sans-serif;
 }
 
 
 
 
 .headliner{
-	font-size: 18px;
+	font-size: 35px;
 	cursor: pointer;
+	
 }
 /*.bandPic{
 	margin-left:28vw;
@@ -46,26 +59,35 @@ text-align: center;
 
 .support{
 
-	font-size: 16px;
+	font-size: 25px;
+	cursor:pointer;
+	
 }
 
 .venue{
-font-size: 14px;
+font-size: 20px;
+
+font-weight: bolder;
 }
 
 .city{
-	font-size: 14px;
+	font-size: 20px;
+	
+	font-weight: bolder;
 }
 
 .date{
 
-	font-size: 14px
+	font-size: 20px;
+	
+	font-weight: bolder;
 }
 
 
 
 .dataContainer{
 	margin-left: 5vw;
+	position:relative;
 	-webkit-animation: fadein 2s;
 
 }
@@ -86,6 +108,19 @@ font-size: 14px;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+.supAudio{
+	background-color: silver;
+	border-radius: 8px;
+	-webkit-animation: fadein 2s;
+
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 
 
 
