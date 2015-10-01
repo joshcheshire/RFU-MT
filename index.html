@@ -17,6 +17,9 @@
 		</head>
 
 	<body>
+	<audio autoplay>
+  <source src="cheer.mp3" type="audio/mpeg">
+		</audio>
 
 	
 	<div ng-controller = "mainController">
@@ -42,7 +45,7 @@
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							<option value = "Boulder">Boulder, CO</option>	
 							<option value = "Denver" >Denver, CO</option>
-							<option value = "Montreal">Montreal, QC</option>							
+							<option value = "Norway">Trondheim, NRW</option>							
 						
 						</select>
 					</div>
@@ -51,10 +54,22 @@
 						<h1 class = "headliner" ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
 							</h1>
+						
+
+
 						<audio controls ng-show = "data.showAudio"  class = "audio"> 
 					
 					<source src ="{{data.headlinerSound}}"> </audio>
-					<div ng-repeat = "band in data.supporters"><h3 class = "support"><em>{{band.name}}</em></h3>
+					<!-- -=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+					
+
+					<div ng-repeat = "band in data.supporters">
+					<h3 class = "support" ><em ng-click = "playSupporterAudio(data)">{{band.name}}</em></h3>
+
+						<audio controls ng-show = "data.showSupAudio" class = "supAudio">
+							<source src ="{{band.supporterSound}}">
+						</audio>
+
 			</div>
 			
 			<h3 class = "venue">{{data.venue}}</h3> 
@@ -62,6 +77,7 @@
 			<h3 class= "city">{{data.city}}</h3>
 			
 			<h3 class = "date">{{data.date}}</h3> 
+		
 		<a ng-href="{{data.tickets}}" class="btn btn-info">Buy Tickets</a><hr>
 		</div>
 
