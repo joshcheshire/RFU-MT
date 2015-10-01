@@ -58,6 +58,8 @@
 						</select>
 					</div>
 					<div class=  "dataContainer"  ng-repeat="data in bandList | filter : search.city">
+
+					
 				
 						<h1 class= "headliner"  ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
@@ -86,7 +88,7 @@
 			
 			<h3 class = "date">{{data.date}}</h3> 
 		
-		<a ng-href="{{data.tickets}}" class="btn btn-danger">Buy Tickets</a><hr>
+		<a ng-href="{{data.tickets}}" id = "btn" class="btn btn-danger">Buy Tickets</a><hr>
 		</div>
 
 	</div>
