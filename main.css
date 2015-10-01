@@ -1,17 +1,19 @@
 
-.header{
+#header{
 	font-family: 'Jura', sans-serif;
 text-align: center;
 	font-size: 60px;
+
 }
 
-.noFuss{
+
+#noFuss{
 font-family: 'Jura', sans-serif;
 font-size: 40px;
 text-align: center;
 }
 
-.dropdownDiv{
+#dropdownDiv{
 	padding-top: 2vw;
 	}
 

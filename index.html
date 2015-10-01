@@ -8,12 +8,15 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Jura:400,500' rel='stylesheet' type='text/css'>
 		
-		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cyborg/bootstrap.css">
+		<link rel = "stylesheet" type ="text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/superhero/bootstrap.css">
+		
 
 		
 		<script src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.min.js"></script>
 		
-		<link rel = "stylesheet" href = "main.css">
+		<link rel = "stylesheet" href = "main.css"> 
+
+		<link rel ="stylesheet" href = "animate.css">
 		</head>
 
 	<body>
@@ -26,9 +29,10 @@
 
 
 		
-		<h1 class = "header"><strong>Just Listen.</strong></h1>
+		<h1 class = "animated slideInLeft" id = "header" ><strong>Just Listen.</strong></h1>
+
 		
-		<h3 class = "noFuss"> No Sign Up. No Fuss.<br> Listen to bands playing in your area.</h3>
+		<h3  class ="animated fadeInRight" id = "noFuss"> No Sign Up. No Fuss.<br> Listen to bands playing in your city.</h3>
 		
 
 			<!-- <form ng-submit="findBands()">
@@ -40,7 +44,7 @@
 			</form> -->
 
 
-			<div class = "dropdownDiv">
+			<div class = "animated fadeInDown" id ="dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
 							<option value = "Boulder">Boulder, CO</option>	

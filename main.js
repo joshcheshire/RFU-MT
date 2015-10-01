@@ -65,13 +65,6 @@ var bandList = [{
 		// img: 'http://blog.lovespeaking.com/wp-content/uploads/2013/03/mercury-prize-ben-howard-every-kingdom.jpg',
 
 },
-{		headliner: 'Papadosio',
-		// showAudio: false,
-		city: 'Boulder,CO' ,
-		venue: 'Boulder Theater',
-		date: ' October 2, 2015',
-		tickets: 'https://bouldertheater.frontgatetickets.com/event/7dtj5yw14fsm4zqy',
-},
 {		headliner: 'Chris Cornell',
 		headlinerSound:"cornell.mp3",		
 		city: 'Denver,CO',
@@ -84,7 +77,7 @@ var bandList = [{
 		city: 'Trondheim, Norway',
 		venue: 'Trondheim Metal Fest',
 		date: 'October 2, 2015',
-		tickets:'',
+		tickets: '',
 
 
 
