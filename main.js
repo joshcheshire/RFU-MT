@@ -78,7 +78,13 @@ var bandList = [{
 		headliner: 'No one is playing here. They were all shot over the weekend. sorry',
 		city: 'Chicago',
 },
+{		headliner: 'Nobody playing here',
+		city: 'Birmingham',
 
+},
+{		headliner: 'No one here ',
+		city: 'Albuquerque',
+},
 
 
 {		headliner: 'Between The Buried And Me',

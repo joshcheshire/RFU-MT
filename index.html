@@ -49,8 +49,8 @@
 			<div class = "animated flipInX" id ="dropdownDiv">
 					<p class = "citySelect"> Select A City</p>
 						<select class = "selector" ng-change= "findBands()" ng-model="search.city" > 
-							<option>Albuquerque, NM</option>
-							<option>Birmingham, AL</option>	
+							<option value = "Albuquerque">Albuquerque, NM</option>
+							<option value = "Birmingham">Birmingham, AL</option>	
 							<option value = "Chicago">Chicago, IL</option>
 							<option value = "Denver">Denver, CO</option>
 							<option value = "Norway">Trondheim, NRW</option>							
@@ -59,7 +59,7 @@
 					</div>
 					<div class=  "dataContainer"  ng-repeat="data in bandList | filter : search.city">
 
-					
+
 				
 						<h1 class= "headliner"  ng-click="playAudio(data)"><em><strong> {{data.headliner}} </strong> </em>
 
